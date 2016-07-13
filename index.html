@@ -6,28 +6,115 @@
 	  <link rel="stylesheet" href="css/main.css">
 	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	  <link href='https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<div class="reloj">
-						<p id="hora"></p>
-						<span>:</span>
-						<p id="min"></p>
+		<div class="container-fluid horalocal">
+			<div class="gradient">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="reloj">
+							<p id="hora"></p>
+							<span>:</span>
+							<p id="min"></p>
+						</div>
+						<p id="fecha"></p>
+						<h5>Santiago, Chile</h5>
 					</div>
-					<p id="fecha"></p>
+				</div>
+				<div class="row text-center">
+					<button type="button" class="btn btn-info btn-circle btn-lg">
+						<i class="glyphicon glyphicon-list"></i>
+					</button>
 				</div>
 			</div>
-			<div class="row text-center">
-				<button type="button" class="btn btn-info btn-circle btn-lg" onclick="horas()">
-					<i class="glyphicon glyphicon-list"></i>
-				</button>
-			</div>
-			<div class="row">
-				<div class="horas"></div>
+		</div>		
+		<div class="container-fluid">
+			<div class="box">
+				<div class="col-md-12">
+					<div class="row">
+						<div id="ciudades">
+							<div class="city">
+								<div class="relojcity">
+									<p class="chicago"></p>
+									<span>:</span>
+									<p class="minutos"></p>
+								</div>
+								Chicago
+							</div>
+							<div class="city">
+								<div class="relojcity">
+									<p class="saopaulo"></p>
+									<span>:</span>
+									<p class="minutos"></p>
+								</div>
+									Sao Paulo
+							</div>
+							<div class="city">
+								<div class="relojcity">
+									<p class="mex"></p>
+									<span>:</span>
+									<p class="minutos"></p>
+								</div>
+								Ciudad de Mexico
+							</div>
+							<div class="city">
+								<div class="relojcity">
+									<p class="caracas"></p>
+									<span>:</span>
+									<p class="minutos"></p>
+								</div>
+								Caracas
+							</div>
+							<div class="city">
+								<div class="relojcity">
+									<p class="brasilia"></p>
+									<span>:</span>
+									<p class="minutos"></p>
+								</div>
+								Brasilia
+							</div>
+							<div class="city">
+								<div class="relojcity">
+									<p class="quito"></p>
+									<span>:</span>
+									<p class="minutos"></p>
+								</div>
+								Quito
+							</div>
+							<div class="city">
+								<div class="relojcity">
+									<p class="guayaquil"></p>
+									<span>:</span>
+									<p class="minutos"></p>
+								</div>
+								Guayaquil
+							</div>
+							<div class="city">
+								<div class="relojcity">
+									<p class="staMarta"></p>
+									<span>:</span>
+									<p class="minutos"></p>
+								</div>
+								Sta. Marta 
+							</div>
+							<div class="city">
+								<div class="relojcity">
+									<p class="bogota"></p>
+									<span>:</span>
+									<p class="minutos"></p>
+								</div>
+								Bogotá
+							</div> 
+						</div>	
+					</div>
+				</div>
 			</div>
 		</div>
+
+
+				
+		
 
 
 		<!-- SCRIPTS -->

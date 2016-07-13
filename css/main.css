@@ -1,14 +1,69 @@
+.container-fluid {
+  padding-left: 0px !important; 
+  padding-right: 0px !important;
+}
+/*Usé important porque CDN no permitía cambiar este valor*/
+
+/*Reloj y parte principal*/
+.horalocal {
+  height: 400px;
+  color: white;
+  min-width: 250px;
+  max-width: 1000px;
+  width: 100%;
+}
+.gradient {
+  width: 100%;
+  height: 100%;
+  background: rgba(252,252,252,0);
+  background: -moz-linear-gradient(top, rgba(252,252,252,0) 0%, rgba(3,3,3,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(252,252,252,0)), color-stop(100%, rgba(3,3,3,1)));
+  background: -webkit-linear-gradient(top, rgba(252,252,252,0) 0%, rgba(3,3,3,1) 100%);
+  background: -o-linear-gradient(top, rgba(252,252,252,0) 0%, rgba(3,3,3,1) 100%);
+  background: -ms-linear-gradient(top, rgba(252,252,252,0) 0%, rgba(3,3,3,1) 100%);
+  background: linear-gradient(to bottom, rgba(252,252,252,0) 0%, rgba(3,3,3,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#030303', GradientType=0 );
+}
 .reloj {
-	font-size: 50px;
+	font-size: 70px;
+  font-family: 'Orbitron', sans-serif;;
 	height: 70px;
+  margin: 50px auto 10px;
 } 
 
 #hora, #min {
 	display: inline-block;
 }
 
+#fecha {
+  font-size: 18px;
+}
+
+
+/*Backgrounds*/
+.dia {
+  background-image: url("http://www.blacktomato.com/wp-content/uploads/2013/06/Santiago-Panoramas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tarde {
+  background-image: url("http://rutasymapas.com/wp-content/uploads/2015/11/12-consejos-para-que-usted-viaje-tranquilo-a-Santiago-de-Chile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.noche {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3e/Santiago_de_Chile_de_noche.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+/*Boton*/
 .btn {
-	margin: 20px auto;
+	margin: 50px auto;
 }
 
 .btn-circle {
@@ -28,4 +83,28 @@
   font-size: 18px;
   line-height: 1.33;
   border-radius: 25px;
+}
+
+
+/* Ciudades */
+.box {
+  background-color: black;
+  color: white;
+  margin-top: -70px;
+}
+#ciudades {
+  width: 210px;
+  margin: 30px auto 30px;
+}
+#ciudades .city {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#ciudades .city .relojcity {
+  margin-right: 40px;
+  display: inline-block;
+}
+#ciudades .city .relojcity p {
+  display: inline-block;
 }

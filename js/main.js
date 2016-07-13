@@ -1,9 +1,6 @@
-//Obtengo fecha en una variable para luego extraer lo que necesito
-var fecha = new Date();
-
-
 //Reloj principal
 function reloj () {
+	var fecha = new Date();
 	var hora = fecha.getHours();
 	var minutos = fecha.getMinutes();
 
@@ -11,40 +8,74 @@ function reloj () {
 	if (hora<10) hora = "0"+hora;
 	if (minutos<10) minutos = "0"+minutos;
 
-	$("#hora").html(hora);
-	$("#min").html(minutos);
+	$("#hora").text(hora);
+	$("#min").text(minutos);
 
-	//setTimeout("reloj()",1000); 
-	//setInterval(reloj, 1000);
+	if(hora >= 6 && hora <12 ){
+		$(".horalocal").addClass("dia");
+	}
+	if(hora >= 12 && hora <19 ){
+		$(".horalocal").addClass("tarde");
+	}
+	if(hora >= 19 && hora <6 ){
+		$(".horalocal").addClass("noche");
+	}
 }
-	
-	
+// Avance de hora
+reloj();
+var intervalo = setInterval(reloj, 1000);	
 
-	
-//Fecha principal
+
+//Fecha
+var fecha = new Date();
 var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
 var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
 $("#fecha").html(diasSemana[fecha.getDay()] + ", " + fecha.getDate() + " de " + meses[fecha.getMonth()]);
 
 
-/*
-// Al hacer click en mas aparecen las opciones de ciudades
-function horas () {
-	var utc = fecha.getUTCHours();
-	var chicago =
-	var saopaulo =
-	var mex = 
-	var caracas = 
-	var brasilia =
-	var quito = 
-	var guayaquil =
-	var staMarta = 
-	var bogota =
+//Horas Ciudades
+//Debe haber otro metodo mas adecuado, pero en fin...
+function ciudades () {
+	var fecha = new Date();
+	var horaLocal = fecha.getHours();
+	var chicago = horaLocal - 1;
+	var saopaulo = horaLocal + 1;
+	var mex = horaLocal - 1;
+	var caracas = horaLocal;
+	var brasilia = horaLocal + 1;
+	var quito = horaLocal - 1;
+	var guayaquil = horaLocal - 1;
+	var staMarta = horaLocal - 1;
+	var bogota = horaLocal - 1;
+	var minutos = fecha.getMinutes();
 
-	$(".horas").
+	//Agregar cero delante a numeros con 1 solo digito
+	if (horaLocal<10) horaLocal = "0"+horaLocal;
+	if (minutos<10) minutos = "0"+minutos;
+
+	$(".chicago").text(chicago);
+	$(".saopaulo").text(saopaulo);
+	$(".mex").text(mex);
+	$(".caracas").text(caracas);
+	$(".brasilia").text(brasilia);
+	$(".quito").text(quito);
+	$(".guayaquil").text(guayaquil);
+	$(".staMarta").text(staMarta);
+	$(".bogota").text(bogota);
+	$(".minutos").text(minutos);
 }
-*/
+// Avance de hora
+ciudades();
+var intervalo = setInterval(ciudades, 1000);	
 
+$("#ciudades").hide();
+
+$("button").click(function(){
+    $("#ciudades").slideToggle();
+});
+
+//Recarga de Doc
 $(document).ready(function() {
 	reloj();
+	ciudades();
 });
