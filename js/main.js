@@ -11,6 +11,8 @@ function reloj () {
 	$("#hora").text(hora);
 	$("#min").text(minutos);
 
+
+    //Cambio de Background segun hora del dia
 	if(hora >= 6 && hora <12 ){
 		$(".horalocal").addClass("dia");
 	}
