@@ -12,15 +12,15 @@ function reloj () {
 	$("#min").text(minutos);
 
 
-    //Cambio de Background segun hora del dia
+    //Cambio de Background
 	if(hora >= 6 && hora <12 ){
-		$(".horalocal").addClass("dia");
+		$(".fondohora").addClass("dia");
 	}
 	if(hora >= 12 && hora <19 ){
-		$(".horalocal").addClass("tarde");
+		$(".fondohora").addClass("tarde");
 	}
 	if(hora >= 19 && hora <6 ){
-		$(".horalocal").addClass("noche");
+		$(".fondohora").addClass("noche");
 	}
 }
 // Avance de hora
