@@ -11,17 +11,16 @@ function reloj () {
 	$("#hora").text(hora);
 	$("#min").text(minutos);
 
-
-    //Cambio de Background
 	if(hora >= 6 && hora <12 ){
-		$(".fondohora").addClass("dia");
+		$("section").addClass("dia");
 	}
 	if(hora >= 12 && hora <19 ){
-		$(".fondohora").addClass("tarde");
+		$("section").addClass("tarde");
 	}
 	if(hora >= 19 && hora <6 ){
-		$(".fondohora").addClass("noche");
+		$("section").addClass("noche");
 	}
+
 }
 // Avance de hora
 reloj();
@@ -70,6 +69,7 @@ function ciudades () {
 ciudades();
 var intervalo = setInterval(ciudades, 1000);	
 
+//Mostrar y ocultar horas de ciudades
 $("#ciudades").hide();
 
 $("button").click(function(){

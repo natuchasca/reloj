@@ -2,6 +2,30 @@ body {
   background-color: black;
 }
 
+/*Backgrounds*/
+.fondohora {
+  height: 400px;
+  color: white;
+  width: 100%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: top;
+}
+.dia {
+  background-image: url("../img/am.jpg");
+}
+
+.tarde {
+  background-image: url("../img/tarde.jpg");
+}
+
+.noche {
+  background-image: url("../img/noche.jpg");
+}
+
 .container-fluid {
   padding-left: 0px; 
   padding-right: 0px;
@@ -38,31 +62,6 @@ body {
 }
 
 
-
-
-/*Backgrounds*/
-.fondohora {
-  height: 400px;
-  color: white;
-  width: 100%;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: top;
-}
-.dia {
-  background-image: url("../img/am.jpg");
-}
-
-.tarde {
-  background-image: url("../img/tarde.jpg");
-}
-
-.noche {
-  background-image: url("../img/noche.jpg");
-}
 
 
 
