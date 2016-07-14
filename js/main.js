@@ -12,12 +12,15 @@ function reloj () {
 	$("#min").text(minutos);
 
 	if(hora >= 6 && hora <12 ){
+		$("section").removeClass("noche");
 		$("section").addClass("dia");
 	}
 	if(hora >= 12 && hora <19 ){
+		$("section").removeClass("dia");
 		$("section").addClass("tarde");
 	}
 	if(hora >= 19 && hora <6 ){
+		$("section").removeClass("tarde");
 		$("section").addClass("noche");
 	}
 
