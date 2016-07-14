@@ -39,6 +39,12 @@ $("#fecha").html(diasSemana[fecha.getDay()] + ", " + fecha.getDate() + " de " + 
 function ciudades () {
 	var fecha = new Date();
 	var horaLocal = fecha.getHours();
+	var minutos = fecha.getMinutes();
+
+	//Agregar cero delante a numeros con 1 solo digito
+	if (horaLocal<10) horaLocal = "0"+horaLocal;
+	if (minutos<10) minutos = "0"+minutos;
+
 	var chicago = horaLocal - 1;
 	var saopaulo = horaLocal + 1;
 	var mex = horaLocal - 1;
@@ -48,11 +54,6 @@ function ciudades () {
 	var guayaquil = horaLocal - 1;
 	var staMarta = horaLocal - 1;
 	var bogota = horaLocal - 1;
-	var minutos = fecha.getMinutes();
-
-	//Agregar cero delante a numeros con 1 solo digito
-	if (horaLocal<10) horaLocal = "0"+horaLocal;
-	if (minutos<10) minutos = "0"+minutos;
 
 	$(".chicago").text(chicago);
 	$(".saopaulo").text(saopaulo);
@@ -73,7 +74,9 @@ var intervalo = setInterval(ciudades, 1000);
 $("#ciudades").hide();
 
 $("button").click(function(){
-    $("#ciudades").slideToggle();
+    $("#ciudades").slideToggle({
+    direction: "up"
+    }, 400);
 });
 
 //Recarga de Doc
