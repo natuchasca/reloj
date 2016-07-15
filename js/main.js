@@ -11,6 +11,11 @@ function reloj () {
 	$("#hora").text(hora);
 	$("#min").text(minutos);
 
+	//Imágenes Background
+	if(hora >= 1 && hora <6 ){
+		$("section").removeClass("noche");
+		$("section").addClass("madrugada");
+	}
 	if(hora >= 6 && hora <12 ){
 		$("section").removeClass("noche");
 		$("section").addClass("dia");
@@ -19,7 +24,7 @@ function reloj () {
 		$("section").removeClass("dia");
 		$("section").addClass("tarde");
 	}
-	if(hora >= 19 && hora <6 ){
+	if(hora >= 19 && hora <24 ){
 		$("section").removeClass("tarde");
 		$("section").addClass("noche");
 	}
